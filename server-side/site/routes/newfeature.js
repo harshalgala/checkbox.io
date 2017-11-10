@@ -1,5 +1,5 @@
 var _ = require('underscore');
-
+var fs = require('fs');
 var redis = require('redis');
 var array = fs.readFileSync('/home/ubuntu/redisclient').toString().split("\n");
 var client = redis.createClient(6379, array[0], {});
