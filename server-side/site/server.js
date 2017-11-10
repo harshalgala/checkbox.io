@@ -87,5 +87,5 @@ app.get('/api/newfeature', newfeature.betafeature);
 
 
 
-app.listen(process.env.MONGO_PORT);
+app.listen(3002);
 console.log('Listening on port 3002...');
