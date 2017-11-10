@@ -8,7 +8,8 @@ var express = require('express'),
 	study = require('./routes/study.js'),
 	admin = require('./routes/admin.js');
 
-var app = express();
+var app = express();	
+var newfeature = require('./routes/newfeature.js');
 
 app.configure(function () {
     app.use(express.logger('dev'));     /* 'default', 'short', 'tiny', 'dev' */
@@ -65,6 +66,7 @@ app.post('/api/study/admin/open/', admin.openStudy );
 app.post('/api/study/admin/close/', admin.closeStudy );
 app.post('/api/study/admin/notify/', admin.notifyParticipant);
 
+app.get('/api/newfeature', newfeature.betafeature);
 //// ################################
 
 //app.post('/api/upload', upload.uploadFile );
